@@ -171,6 +171,13 @@ public class SoapRequestUtil {
 	 }
 	
 	
+	/**
+	 * Sends a SOAP request with the specified XML content to the given URL, handling timeouts and connection errors.
+	 *
+	 * @param pSoapText the SOAP XML request body to send
+	 * @param soapRequestURL the endpoint URL to which the SOAP request is sent
+	 * @return {@code true} if the SOAP request completes successfully; {@code false} if a timeout or error occurs
+	 */
 	public boolean doSoapRequest(String pSoapText, String soapRequestURL)
 	{
 		String soapText = pSoapText;
