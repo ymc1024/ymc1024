@@ -210,7 +210,7 @@ public class SoapRequestUtil {
            
             // SOAP 메시지 준비 및 전송
             //-----------------------
-            /*  
+           // jdk1.6 에서는 지원 안되지만, 테스트 함 해봄
             	URLConnection urlConnection = urlEndpoint.openConnection(); // URL로부터 URLConnection 생성
             	urlConnection.setConnectTimeout(15000); // URLConnection에 직접 타임아웃 설정
             	urlConnection.setReadTimeout(15000);    // URLConnection에 직접 타임아웃 설정
@@ -220,7 +220,7 @@ public class SoapRequestUtil {
              	SOAPMessage reply = con.call(message, urlEndpoint);            			
 			  	long step2 = System.currentTimeMillis();
 			  	reply.writeTo( System.out );
-			*/
+			
 			//------------------------------------------------------
             
             //2025
