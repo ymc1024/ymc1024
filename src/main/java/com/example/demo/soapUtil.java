@@ -232,7 +232,7 @@ public class SoapRequestUtil {
                 SOAPMessage response = sendWithTimeout(con, message, urlEndpoint);
                 
                 // 응답 처리 
-                System.out.println("SOAP 응답 성공:");
+                System.out.println("SOAP 응답 성공");
                 response.writeTo(System.out);
                 
             } catch (SOAPTimeoutException e) {
