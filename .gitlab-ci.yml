@@ -1,0 +1,9 @@
+
+stages:
+  - review
+
+
+coderabbit_review:
+  stage: review
+  script:
+    - echo "CodeRabbit will automatically review this MR"
