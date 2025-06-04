@@ -220,8 +220,10 @@ public class SoapRequestUtil {
              	SOAPMessage reply = con.call(message, urlEndpoint);            			
 			  	long step2 = System.currentTimeMillis();
 			  	reply.writeTo( System.out );
-			
-			//------------------------------------------------------
+
+              //@coderabbitai review 
+                System.out.println(step2)			
+	     //------------------------------------------------------
             
             //2025
             //jdk1.6은 soap 에 timeout 설정이 없어서 ,  thread 로 요청 하여, thread 시간 설정 
