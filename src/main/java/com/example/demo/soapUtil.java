@@ -171,6 +171,13 @@ public class SoapRequestUtil {
 	 }
 	
 	
+	/**
+	 * Sends a SOAP request with the specified XML content to the given URL, handling timeouts and connection errors.
+	 *
+	 * @param pSoapText the SOAP XML request body to send
+	 * @param soapRequestURL the endpoint URL to which the SOAP request is sent
+	 * @return {@code true} if the SOAP request completes successfully; {@code false} if a timeout or error occurs
+	 */
 	public boolean doSoapRequest(String pSoapText, String soapRequestURL)
 	{
 		String soapText = pSoapText;
@@ -220,8 +227,10 @@ public class SoapRequestUtil {
              	SOAPMessage reply = con.call(message, urlEndpoint);            			
 			  	long step2 = System.currentTimeMillis();
 			  	reply.writeTo( System.out );
-			
-			//------------------------------------------------------
+
+              //@coderabbitai review 
+                System.out.println(step2)			
+	     //------------------------------------------------------
             
             //2025
             //jdk1.6은 soap 에 timeout 설정이 없어서 ,  thread 로 요청 하여, thread 시간 설정 

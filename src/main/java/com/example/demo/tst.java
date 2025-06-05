@@ -9,6 +9,8 @@ public class CourseFacade {
 
         // 인자값을 잘못 넘김
         courseService.createCourse(name, description, description, vetId);
+	//리턴값 오류 및 인자 오류    
+	String str1 = doSoapRequest(name);    
     }
 	
 	public boolean doSoapRequest(String pSoapText, String soapRequestURL)
